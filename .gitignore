@@ -1,0 +1,110 @@
+# ============================
+# Python & Django
+# ============================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django specific
+*.log
+*.pot
+*.pyc
+*.sqlite3
+db.sqlite3
+local_settings.py
+media/
+staticfiles/
+uploads/
+.env
+.env.*
+*.env
+
+# Django migration backups
+*/migrations/__pycache__/
+*/migrations/*.pyc
+*/migrations/*.py~
+*/migrations/*.log
+
+# ============================
+# Virtual Environments
+# ============================
+.venv/
+venv/
+env/
+ENV/
+*.bak
+*.swp
+
+# ============================
+# IDE / Editor / OS Files
+# ============================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# ============================
+# Bytecode & Cache
+# ============================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ============================
+# Coverage / Test / Reports
+# ============================
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+test_*.log
+junit*.xml
+
+# ============================
+# Docker / Containers
+# ============================
+# Ignore Docker artifacts
+docker-compose.override.yml
+.docker/
+*.pid
+*.seed
+*.lock
+
+# ============================
+# Environment & Secrets
+# ============================
+*.env
+.env.*
+config/*.secret
+config/*.json
+secrets/
+*.pem
+*.key
+
+# ============================
+# Node / Frontend (if any UI)
+# ============================
+node_modules/
+dist/
+build/
+package-lock.json
+
+# ============================
+# PyCharm / JetBrains
+# ============================
+.idea/
+*.iml
+
+# ============================
+# Misc
+# ============================
+logs/
+tmp/
+.cache/
+*.bak
+*.orig
+*.rej
