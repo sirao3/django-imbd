@@ -4,11 +4,11 @@ from .views import WatchListAV, MovieDetailAV, StreamPlatformAV, StreamPlatformD
 
 urlpatterns = [
     path('list/', WatchListAV.as_view(), name='movie-list'),
-    path('<int:pk>', MovieDetailAV.as_view(), name='movie-detail'),
+    path('<int:pk>/', MovieDetailAV.as_view(), name='movie-detail'),
     path('stream/', StreamPlatformAV.as_view(),name="streaming-platform"),
     path('stream/<int:pk>', StreamPlatformDetailAV.as_view(), name="stream-detail"),
 
-    path('stream/<int:pk>/review/',ReviewList.as_view(), name = "review-list"),
-    path('stream/<int:pk>/review-create/',ReviewCreate.as_view(), name = "review-list"),
-    path('stream/review/<int:pk>', ReviewDetail.as_view(), name="review-detail")
+    path('<int:pk>/review/',ReviewList.as_view(), name = "review-list"),
+    path('<int:pk>/review-create/',ReviewCreate.as_view(), name = "review-list"),
+    path('review/<int:pk>/', ReviewDetail.as_view(), name="review-detail")
 ]
