@@ -8,11 +8,13 @@ from watchlist_app.models import WatchList,StreamingPlatform,Review
 from .serializers import WatchListSerializer,StreamingPlatformSerializer,ReviewSerializer
 from rest_framework import status
 from rest_framework.validators import ValidationError
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.permissions import IsAuthenticated,IsAuthenticatedOrReadOnly
 from watchlist_app.api.permissions import ReviewUserOrReadOnly
+
 class ReviewList(generics.ListAPIView):
     # queryset = Review.objects.all()
     serializer_class = ReviewSerializer
+    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         pk = self.kwargs['pk']
